@@ -42,23 +42,20 @@
       <change afterPath="$PROJECT_DIR$/../PlaywrightJava/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../PlaywrightJava/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../PlaywrightJava/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignApr2026/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignApr2026/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignApr2026/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignApr2026/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignApr2026/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignApr2026/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignApr2026/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignApr2026/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignApr2026/src/main/java/com/qa/api/pojo/Products.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignApr2026/src/test/resources/schema/create-user-schema.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignApr2026/src/test/resources/schema/get-user-schema.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignSep2025/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignSep2025/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignSep2025/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/listeners/AnnotationTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/listeners/Retry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/listeners/TestAllureListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ElementUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ExcelUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/JavaScriptExecutorUtil.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../SeleniumAutomationFrameworkOCT2025/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../SeleniumAutomationFrameworkOCT2025/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../SeleniumAutomationFrameworkOCT2025/pom.xml" afterDir="false" />
@@ -74,6 +71,11 @@
       <change afterPath="$PROJECT_DIR$/../TimeComplexityConcept/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TimeComplexityConcept/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TimeComplexityConcept/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ElementUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ElementUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,47 +96,47 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="3BUID0VwEMgv8xmzkdI5FCBcEIw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="sortKey" value="BY_TIME_ASCENDING" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "TestNG./Users/rhanumantharaya/Desktop/Automation/SeleniumAutomationFrameworkApr2026/src/test/resources/runner/testng_regression.xml.executor": "Run",
-    "TestNG.HomePageTest.doSearchTest.executor": "Run",
-    "TestNG.HomePageTest.executor": "Run",
-    "TestNG.HomePageTest.headersTest.executor": "Run",
-    "TestNG.LoginPageTest (1).executor": "Run",
-    "TestNG.LoginPageTest.executor": "Coverage",
-    "TestNG.LoginPageTest.getFooterLink.executor": "Run",
-    "TestNG.LoginPageTest.isLogoDisplayed.executor": "Run",
-    "TestNG.LoginPageTest.loginPageTitleTest.executor": "Run",
-    "TestNG.LoginPageTest.loginTest.executor": "Run",
-    "TestNG.ProductInfoPageTest (1).executor": "Run",
-    "TestNG.ProductInfoPageTest.executor": "Run",
-    "TestNG.ProductInfoPageTest.getProductInfoTest.executor": "Run",
-    "TestNG.ProductInfoPageTest.logoutFromProductPage.executor": "Run",
-    "TestNG.ProductInfoPageTest.productDetailsTest.executor": "Run",
-    "TestNG.ProductInfoPageTest.productHeaderSearchHeaderTest.executor": "Run",
-    "TestNG.ProductInfoPageTest.productImagesCount.executor": "Run",
-    "TestNG.ProductInfoPageTest.productImagesCountFromSheet.executor": "Run",
-    "TestNG.RegistrationPageTest.userRegistrationTest.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/rhanumantharaya/Desktop/Automation/SeleniumAutomationFrameworkApr2026/src/main/resources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;TestNG./Users/rhanumantharaya/Desktop/Automation/SeleniumAutomationFrameworkApr2026/src/test/resources/runner/testng_regression.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.doSearchTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.headersTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPageTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPageTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;TestNG.LoginPageTest.getFooterLink.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPageTest.isLogoDisplayed.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPageTest.loginPageTitleTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPageTest.loginTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductInfoPageTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductInfoPageTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductInfoPageTest.getProductInfoTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductInfoPageTest.logoutFromProductPage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductInfoPageTest.productDetailsTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductInfoPageTest.productHeaderSearchHeaderTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductInfoPageTest.productImagesCount.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductInfoPageTest.productImagesCountFromSheet.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationPageTest.userRegistrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rhanumantharaya/Desktop/Automation/SeleniumAutomationFrameworkApr2026/src/main/resources&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />

@@ -7,8 +7,6 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
-import utils.JavaScriptExecutorUtil;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
