@@ -30,7 +30,6 @@ public class BaseTest {
     @BeforeTest
     public void setup(String browserName) {
 
-
         driverFactory = new DriverFactory();
         properties = driverFactory.initProp();
 

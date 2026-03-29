@@ -20,5 +20,4 @@ public abstract class AppConstants {
     public static final String PRODUCT_SHEET_NAME = "Product";
     public static final String REGISTRATION_SHEET_NAME = "Users";
 
-
 }
