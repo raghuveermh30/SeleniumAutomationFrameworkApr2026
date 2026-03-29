@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8f90b8dc-8d44-4a41-937a-76318c0e495c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/Automation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CucumberSampleProject/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CucumberSampleProject/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CucumberSampleProject/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CucumberSampleProject/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CucumberSampleProject/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CucumberSampleProject/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CucumberSampleProject/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/src/main/java/seleniumwithsingleton/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/src/main/java/seleniumwithsingleton/WebDriverManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/src/main/java/singletonpattenconcept/Browser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/src/main/java/singletonpattenconcept/BrowserClone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/src/main/java/singletonpattenconcept/BrowserReadResolve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/src/main/java/singletonpattenconcept/BrowserTestReflectionAttack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/src/main/java/singletonpattenconcept/ReflectionApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaDesignPattern/src/main/java/singletonpattenconcept/TestBrowser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LatestCucumber6WithPOM/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LatestCucumber6WithPOM/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LatestCucumber6WithPOM/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LatestCucumber6WithPOM/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LatestCucumber6WithPOM/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LatestCucumber6WithPOM/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LatestCucumber6WithPOM/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlaywrightJava/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlaywrightJava/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlaywrightJava/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlaywrightJava/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlaywrightJava/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlaywrightJava/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlaywrightJava/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlaywrightJava/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignSep2025/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignSep2025/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RestAPIFWDesignSep2025/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/listeners/AnnotationTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/listeners/Retry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/listeners/TestAllureListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ElementUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ExcelUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/JavaScriptExecutorUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumAutomationFrameworkOCT2025/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumAutomationFrameworkOCT2025/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumAutomationFrameworkOCT2025/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumAutomationFrameworkOCT2025/src/main/java/com/qa/opencart/listeners/AnnotationTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumAutomationFrameworkOCT2025/src/main/java/com/qa/opencart/listeners/Retry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumTestNGTestRail/src/main/java/com/gurock/testrail/APIClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumTestNGTestRail/src/main/java/com/gurock/testrail/APIException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumTestNGTestRail/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumTestNGTestRail/src/test/java/mytest/GoogleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumTestNGTestRail/src/test/java/mytest/HomePageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumTestNGTestRail/src/test/java/mytest/LoginPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SeleniumTestNGTestRail/src/test/java/resources/testrunner/testng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimeComplexityConcept/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimeComplexityConcept/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimeComplexityConcept/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/rhanumantharaya/Desktop/Automation/SeleniumAutomationFrameworkApr2026" value="3BUID0VwEMgv8xmzkdI5FCBcEIw" />
+    </persistenceIdMap>
+  </component>
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="3BUID0VwEMgv8xmzkdI5FCBcEIw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortKey" value="BY_TIME_ASCENDING" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG./Users/rhanumantharaya/Desktop/Automation/SeleniumAutomationFrameworkApr2026/src/test/resources/runner/testng_regression.xml.executor": "Run",
+    "TestNG.HomePageTest.doSearchTest.executor": "Run",
+    "TestNG.HomePageTest.executor": "Run",
+    "TestNG.HomePageTest.headersTest.executor": "Run",
+    "TestNG.LoginPageTest (1).executor": "Run",
+    "TestNG.LoginPageTest.executor": "Coverage",
+    "TestNG.LoginPageTest.getFooterLink.executor": "Run",
+    "TestNG.LoginPageTest.isLogoDisplayed.executor": "Run",
+    "TestNG.LoginPageTest.loginPageTitleTest.executor": "Run",
+    "TestNG.LoginPageTest.loginTest.executor": "Run",
+    "TestNG.ProductInfoPageTest (1).executor": "Run",
+    "TestNG.ProductInfoPageTest.executor": "Run",
+    "TestNG.ProductInfoPageTest.getProductInfoTest.executor": "Run",
+    "TestNG.ProductInfoPageTest.logoutFromProductPage.executor": "Run",
+    "TestNG.ProductInfoPageTest.productDetailsTest.executor": "Run",
+    "TestNG.ProductInfoPageTest.productHeaderSearchHeaderTest.executor": "Run",
+    "TestNG.ProductInfoPageTest.productImagesCount.executor": "Run",
+    "TestNG.ProductInfoPageTest.productImagesCountFromSheet.executor": "Run",
+    "TestNG.RegistrationPageTest.userRegistrationTest.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/rhanumantharaya/Desktop/Automation/SeleniumAutomationFrameworkApr2026/src/main/resources"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/test/resources/testdata" />
+      <recent name="$PROJECT_DIR$/src/main/java/listeners" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/utils" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="listeners" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG./Users/rhanumantharaya/Desktop/Automation/SeleniumAutomationFrameworkApr2026/src/test/resources/runner/testng_regression.xml">
+    <configuration name="LoginPageTest.loginPageTitleTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumAutomationFrameworkApr2026" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LoginPageTest" />
+      <option name="METHOD_NAME" value="loginPageTitleTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductInfoPageTest.productImagesCount" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumAutomationFrameworkApr2026" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ProductInfoPageTest" />
+      <option name="METHOD_NAME" value="productImagesCount" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductInfoPageTest.productImagesCountFromSheet" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumAutomationFrameworkApr2026" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ProductInfoPageTest" />
+      <option name="METHOD_NAME" value="productImagesCountFromSheet" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationPageTest.userRegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumAutomationFrameworkApr2026" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.RegistrationPageTest" />
+      <option name="METHOD_NAME" value="userRegistrationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/rhanumantharaya/Desktop/Automation/SeleniumAutomationFrameworkApr2026/src/test/resources/runner/testng_regression.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumAutomationFrameworkApr2026" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/runner/testng_regression.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG./Users/rhanumantharaya/Desktop/Automation/SeleniumAutomationFrameworkApr2026/src/test/resources/runner/testng_regression.xml" />
+        <item itemvalue="TestNG.LoginPageTest.loginPageTitleTest" />
+        <item itemvalue="TestNG.RegistrationPageTest.userRegistrationTest" />
+        <item itemvalue="TestNG.ProductInfoPageTest.productImagesCountFromSheet" />
+        <item itemvalue="TestNG.ProductInfoPageTest.productImagesCount" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f90b8dc-8d44-4a41-937a-76318c0e495c" name="Changes" comment="" />
+      <created>1774537099392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774537099392</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/test/HomePageTest.java</url>
+          <line>54</line>
+          <properties class="test.HomePageTest" method="headersTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/constants/AppConstants.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SeleniumAutomationFrameworkApr2026$LoginPageTest.ic" NAME="LoginPageTest Coverage Results" MODIFIED="1774674381042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
