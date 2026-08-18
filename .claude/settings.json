@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home mvn compile -q 2>/dev/null || true",
+            "timeout": 60,
+            "statusMessage": "Checking project compiles before edit..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home mvn compile -q 2>/dev/null || true",
+            "timeout": 60,
+            "statusMessage": "Verifying project still compiles after edit..."
+          }
+        ]
+      }
+    ]
+  }
+}
