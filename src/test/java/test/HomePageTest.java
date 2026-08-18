@@ -55,6 +55,7 @@ public class HomePageTest extends BaseTest {
     public void headersTest() {
         List<String> actualHeaders = homePage.getHeaders();
         System.out.println("Home Page Actual Headers : " + actualHeaders);
+        Assert.assertFalse(actualHeaders.isEmpty(), AppError.HOME_PAGE_HEADERS_EMPTY_ERROR);
     }
 
     @DataProvider
@@ -66,6 +67,18 @@ public class HomePageTest extends BaseTest {
                 {"canon", 1},
                 {"airtel", 0}
         };
+    }
+
+    @Description("Search Results Page Title Test")
+    @Severity(SeverityLevel.MINOR)
+    @Owner("Raghuveer Hanumantharaya")
+    @Test(priority = 1, description = "Search results page title should contain 'Search'")
+    public void searchResultsPageTitleTest() {
+        searchResultsPage = homePage.doSearch("macbook");
+        String title = searchResultsPage.getSearchResultsPageTitle();
+        System.out.println("Search Results Page Title : " + title);
+        Assert.assertTrue(title.contains(AppConstants.SEARCH_RESULTS_PAGE_TITLE_FRACTION),
+                "Search results page title should contain '" + AppConstants.SEARCH_RESULTS_PAGE_TITLE_FRACTION + "'");
     }
 
     @Test(priority = Integer.MAX_VALUE, dataProvider = "getProductSearchData")

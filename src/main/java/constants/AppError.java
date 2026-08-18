@@ -11,4 +11,9 @@ public abstract class AppError {
     public static final String ELEMENT_NOT_CLICKABLE_ERROR = "Element is not clickable on the page";
 
     public static final String LOGO_NOT_DISPLAYED_ERROR = "Logo is not displayed on the page";
+    public static final String INVALID_LOGIN_ERROR = "Login warning message is not displayed for invalid credentials";
+    public static final String HOME_PAGE_HEADERS_EMPTY_ERROR = "Home page headers list should not be empty after login";
+    public static final String LOGOUT_MSG_NOT_DISPLAYED_ERROR = "Logout message is not displayed after logout";
+    public static final String PRODUCT_DETAILS_EMPTY_ERROR = "Product details list should not be empty";
+    public static final String REGISTRATION_VALIDATION_ERROR = "Validation errors should be displayed";
 }

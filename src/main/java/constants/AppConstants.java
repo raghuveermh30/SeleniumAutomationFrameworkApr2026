@@ -6,6 +6,7 @@ public abstract class AppConstants {
     public static final String LOGIN_PAGE_URL_FRACTION = "route=account/login";
     public static final String HOME_PAGE_TITLE = "My Account";
     public static final String HOME_PAGE_URL_FRACTION = "route=account/account";
+    public static final String SEARCH_RESULTS_PAGE_TITLE_FRACTION = "Search";
 
     public static final int DEFAULT_TIME_OUT = 5;
     public static final int SHORT_TIME_OUT = 10;

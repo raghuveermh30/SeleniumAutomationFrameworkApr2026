@@ -30,6 +30,7 @@ public class LoginPage {
     private final By loginBtn = By.xpath("//input[@value='Login']");
     private final By forgotPwd = By.linkText("Forgotten Password");
     private final By registerLink = By.linkText("Register");
+    private final By loginWarning = By.cssSelector("div.alert-danger");
 
 
     //2. Page Methods or Actions --> Feature of the Page
@@ -58,10 +59,16 @@ public class LoginPage {
     public HomePage doLogin(String userName, String pwd) {
         System.out.println("App credentials are " + userName + " : " + pwd);
         log.info("App credentials are {} : {}", userName, pwd);
-        elementUtil.waitForElementVisible(email, AppConstants.SHORT_TIME_OUT).sendKeys(userName);
+        elementUtil.waitForElementVisible(email, AppConstants.SHORT_TIME_OUT);
+        elementUtil.doSendKeys(email, userName);
         elementUtil.doSendKeys(password, pwd);
         elementUtil.doClick(loginBtn);
         return new HomePage(driver);
+    }
+
+    @Step("get login warning message")
+    public String getLoginWarningMessage() {
+        return elementUtil.doElementGetText(loginWarning);
     }
 
     @Step("Click on Register")

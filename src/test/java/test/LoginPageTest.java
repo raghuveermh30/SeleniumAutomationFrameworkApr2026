@@ -83,7 +83,28 @@ public class LoginPageTest extends BaseTest {
         ChainTestListener.log(">>loginTest()");
         homePage = loginPage.doLogin(properties.getProperty("username"), properties.getProperty("password"));
         Assert.assertEquals(homePage.getHomePageTitle(), "My Account", "=== Home Page Title is not Matched ===");
+    }
 
+    @Description("Invalid Login Test - Wrong Password")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Raghuveer Hanumantharaya")
+    @Test(priority = -1, description = "Login should fail and show warning for wrong password")
+    public void invalidLoginWithWrongPasswordTest() {
+        ChainTestListener.log(">>invalidLoginWithWrongPasswordTest()");
+        loginPage.doLogin(properties.getProperty("username"), "WrongPassword@999");
+        String warningMsg = loginPage.getLoginWarningMessage();
+        Assert.assertTrue(warningMsg.contains("Warning:"), AppError.INVALID_LOGIN_ERROR);
+    }
+
+    @Description("Invalid Login Test - Empty Credentials")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Raghuveer Hanumantharaya")
+    @Test(priority = -2, description = "Login should fail and show warning for empty credentials")
+    public void loginWithEmptyCredentialsTest() {
+        ChainTestListener.log(">>loginWithEmptyCredentialsTest()");
+        loginPage.doLogin("", "");
+        String warningMsg = loginPage.getLoginWarningMessage();
+        Assert.assertTrue(warningMsg.contains("Warning:"), AppError.INVALID_LOGIN_ERROR);
     }
 
 

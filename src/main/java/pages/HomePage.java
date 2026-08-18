@@ -69,6 +69,14 @@ public class HomePage {
         }
     }
 
+    @Step("Logout from Home Page and return LogoutPage")
+    public LogoutPage doLogout() {
+        if (isLogoutLinkExist()) {
+            elementUtil.getElement(logoutLink).click();
+        }
+        return new LogoutPage(driver);
+    }
+
     @Step("Search the Product : {0}")
     public SearchResultsPage doSearch(String searchKey) {
         System.out.println("My Search Key is " + searchKey);

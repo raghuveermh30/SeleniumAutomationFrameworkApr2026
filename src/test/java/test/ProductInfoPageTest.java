@@ -70,6 +70,7 @@ public class ProductInfoPageTest extends BaseTest {
         productInfoPage = searchResultsPage.selectProduct(productName);
         List<String> productDetailsList = productInfoPage.getProductDetails();
         productDetailsList.forEach(System.out::println);
+        Assert.assertFalse(productDetailsList.isEmpty(), AppError.PRODUCT_DETAILS_EMPTY_ERROR + " for product: " + productName);
     }
 
     @DataProvider

@@ -27,6 +27,7 @@ public class RegistrationPage {
     private final By continueBtn = By.xpath("//input[@value='Continue']");
     private final By successMsg = By.cssSelector("div#content h1");
     private final By logoutLink = By.linkText("Logout");
+    private final By validationError = By.cssSelector(".text-danger");
 
     public String doRegister(String fName, String lName, String emailId, String telPhn, String pwd, String confirmpassword) {
         elementUtil.waitForElementVisible(firstName, AppConstants.DEFAULT_TIME_OUT);
@@ -53,6 +54,17 @@ public class RegistrationPage {
         elementUtil.waitForElementVisible(logoutLink, AppConstants.MEDIUM_TIME_OUT);
         elementUtil.doClick(logoutLink);
         return new LogoutPage(driver);
+    }
+
+    @Step("submit registration form without filling any fields")
+    public void submitWithEmptyFields() {
+        elementUtil.waitForElementVisible(continueBtn, AppConstants.DEFAULT_TIME_OUT);
+        elementUtil.doClick(continueBtn);
+    }
+
+    @Step("check if validation errors are displayed")
+    public boolean hasValidationErrors() {
+        return elementUtil.getElements(validationError).size() > 0;
     }
 
 }
