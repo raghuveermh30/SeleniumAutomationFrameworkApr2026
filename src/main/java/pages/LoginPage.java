@@ -8,16 +8,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import software.amazon.awssdk.services.s3.endpoints.internal.Value;
 import utils.ElementUtil;
 
 
+/**
+ * Page object representing the OpenCart account login page.
+ * <p>
+ * Exposes actions such as logging in, checking the forgotten-password link,
+ * reading login warning messages, and navigating to registration.
+ */
 public class LoginPage {
 
     WebDriver driver;
     private ElementUtil elementUtil;
     private static final Logger log = LoggerFactory.getLogger(LoginPage.class);
 
+    /**
+     * Creates a new LoginPage bound to the given driver.
+     *
+     * @param driver the WebDriver instance controlling the browser
+     */
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         elementUtil = new ElementUtil(driver);
@@ -34,6 +44,11 @@ public class LoginPage {
 
 
     //2. Page Methods or Actions --> Feature of the Page
+    /**
+     * Returns the login page title.
+     *
+     * @return the login page title
+     */
     @Step("get Login Title")
     public String getLoginPageTitle() {
         String title = elementUtil.waitForTitleIs(AppConstants.LOGIN_PAGE_TITLE, AppConstants.DEFAULT_TIME_OUT);
@@ -43,6 +58,11 @@ public class LoginPage {
         return title;
     }
 
+    /**
+     * Returns the current login page URL.
+     *
+     * @return the login page URL
+     */
     @Step("get Login URL")
     public String getLoginPageUrl() {
         String currentUrl = elementUtil.waitForUrlContains(AppConstants.LOGIN_PAGE_URL_FRACTION, AppConstants.DEFAULT_TIME_OUT);
@@ -50,11 +70,23 @@ public class LoginPage {
         return currentUrl;
     }
 
+    /**
+     * Checks whether the Forgotten Password link is present on the page.
+     *
+     * @return true if the link exists, false otherwise
+     */
     @Step("Forgot Password Link ")
     public boolean isForgotPassLinkExist() {
         return elementUtil.doElementIsDisplayed(forgotPwd);
     }
 
+    /**
+     * Logs in with the given credentials and returns the resulting home page.
+     *
+     * @param userName the account email/username
+     * @param pwd the account password
+     * @return a new {@link HomePage}
+     */
     @Step("login with username : {0} and password : {1}")
     public HomePage doLogin(String userName, String pwd) {
         System.out.println("App credentials are " + userName + " : " + pwd);
@@ -66,11 +98,21 @@ public class LoginPage {
         return new HomePage(driver);
     }
 
+    /**
+     * Returns the warning message displayed after an invalid login attempt.
+     *
+     * @return the login warning message text
+     */
     @Step("get login warning message")
     public String getLoginWarningMessage() {
         return elementUtil.doElementGetText(loginWarning);
     }
 
+    /**
+     * Clicks the Register link and returns the resulting registration page.
+     *
+     * @return a new {@link RegistrationPage}
+     */
     @Step("Click on Register")
     public RegistrationPage clickOnRegister(){
         elementUtil.waitForElementVisible(registerLink, AppConstants.MEDIUM_TIME_OUT);

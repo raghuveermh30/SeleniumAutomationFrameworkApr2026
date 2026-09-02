@@ -9,6 +9,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * Utility for reading tabular test data from Excel workbooks using Apache POI.
+ */
 public class ExcelUtil {
 
     private static final String TEST_DATA_SHEET_PATH = "./src/test/resources/testdata/openCartTestdata.xlsx";
@@ -37,18 +40,45 @@ public class ExcelUtil {
      */
 
 
+    /**
+     * Reads all data rows (excluding the header row) from the given sheet in
+     * the users test data workbook.
+     *
+     * @param sheetName the name of the sheet to read
+     * @return a 2D array of cell values as strings, indexed by [row][column]
+     * @throws RuntimeException if the file cannot be found, read, or is an invalid format
+     */
     public static Object[][] getTestData(String sheetName) {
+        return getTestData(USERS_TEST_DATA_SHEET_PATH, sheetName);
+    }
 
-        try {
-            FileInputStream inputStream = new FileInputStream(USERS_TEST_DATA_SHEET_PATH);
+    /**
+     * Reads all data rows (excluding the header row) from the given sheet in
+     * the specified Excel workbook.
+     *
+     * @param filePath  path to the Excel workbook
+     * @param sheetName the name of the sheet to read
+     * @return a 2D array of cell values as strings, indexed by [row][column]
+     * @throws RuntimeException if the file cannot be found, read, or is an invalid format
+     */
+    public static Object[][] getTestData(String filePath, String sheetName) {
+
+        try (FileInputStream inputStream = new FileInputStream(filePath)) {
             book = WorkbookFactory.create(inputStream);
             sheet = book.getSheet(sheetName);
 
-            //Object array -> Object[Row][Column]
-            data = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
+            if (sheet == null) {
+                throw new RuntimeException("Sheet '" + sheetName + "' not found in workbook: " + filePath);
+            }
 
-            for (int i = 0; i < sheet.getLastRowNum(); i++) {
-                for (int j = 0; j < sheet.getRow(0).getLastCellNum(); j++) {
+            int rowCount = sheet.getLastRowNum();
+            int colCount = sheet.getRow(0).getLastCellNum();
+
+            //Object array -> Object[Row][Column]
+            data = new Object[rowCount][colCount];
+
+            for (int i = 0; i < rowCount; i++) {
+                for (int j = 0; j < colCount; j++) {
                     data[i][j] = sheet.getRow(i + 1).getCell(j).toString();
                 }
             }

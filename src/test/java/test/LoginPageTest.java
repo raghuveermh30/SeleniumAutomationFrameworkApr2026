@@ -13,11 +13,18 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+/**
+ * Test suite covering OpenCart login page functionality: title/URL checks,
+ * forgotten-password link, logo, footer links and valid/invalid login flows.
+ */
 @Epic("SUP-12345 - Login Page Design for OpenCart Application")
 @Story("SUP-100 - Login Page Features for OpenCart Application")
 @Feature("SUP-1 - Login Page Test Features")
 public class LoginPageTest extends BaseTest {
 
+    /**
+     * Verifies the login page title matches the expected value.
+     */
     @Description("Login Page Title Test")
     @Severity(SeverityLevel.MINOR)
     @Owner("Raghuveer Hanumantharaya")
@@ -28,6 +35,9 @@ public class LoginPageTest extends BaseTest {
         Assert.assertEquals(title, AppConstants.LOGIN_PAGE_TITLE, AppError.LOGIN_PAGE_TITLE_ERROR);
     }
 
+    /**
+     * Verifies the login page URL contains the expected fragment.
+     */
     @Description("Login Page URL Test")
     @Severity(SeverityLevel.TRIVIAL)
     @Owner("Raghuveer Hanumantharaya")
@@ -38,6 +48,9 @@ public class LoginPageTest extends BaseTest {
         Assert.assertTrue(loginPageUrl.contains(AppConstants.LOGIN_PAGE_URL_FRACTION), AppError.LOGIN_PAGE_URL_ERROR);
     }
 
+    /**
+     * Verifies the Forgotten Password link is present on the login page.
+     */
     @Description("Forgot Password Link Test")
     @Severity(SeverityLevel.NORMAL)
     @Owner("Naveen Automation Labs")
@@ -47,6 +60,9 @@ public class LoginPageTest extends BaseTest {
         Assert.assertTrue(loginPage.isForgotPassLinkExist(), AppError.FORGOT_PWD_LINK_ERROR);
     }
 
+    /**
+     * Verifies the site logo is displayed on the login page.
+     */
     @Description("Logo Displayed Test on Home Page")
     @Test(description = "Logo Displayed Test", priority = 2)
     public void isLogoDisplayed() {
@@ -54,7 +70,13 @@ public class LoginPageTest extends BaseTest {
         Assert.assertTrue(commonPage.isLogoDisplayed(), AppError.LOGO_NOT_DISPLAYED_ERROR);
     }
 
-    @Test(dataProvider = "getFooterData", description = "Footer Links Test", enabled = true, priority = 3)
+    /**
+     * Verifies each expected footer link is present on the login page.
+     *
+     * @param linkName the footer link text to check for
+     */
+    @Test(dataProvider = "footerLinksData", dataProviderClass = utils.TestDataUtil.class,
+            description = "Footer Links Test", enabled = true, priority = 3)
     public void getFooterLink(String linkName) {
         ChainTestListener.log(">>getFooterLink()");
         List<String> footerLinks = commonPage.getFooterLinks();
@@ -62,20 +84,9 @@ public class LoginPageTest extends BaseTest {
         Assert.assertTrue(commonPage.checkFooterLink(linkName));
     }
 
-    @DataProvider
-    public Object[][] getFooterData() {
-        return new Object[][]{
-                {"Contact Us"},
-                {"Delivery Information"},
-                {"Returns"},
-                {"Brands"},
-                {"Gift Certificates"},
-                {"Affiliate"},
-                {"Specials"},
-                {"My Account"}
-        };
-    }
-
+    /**
+     * Verifies a successful login with valid credentials lands on the home page.
+     */
     @Description("Login Test with valid credentials")
     @Owner("Naveen Automation Labs")
     @Test(priority = 1, description = "Login Test")
@@ -85,6 +96,9 @@ public class LoginPageTest extends BaseTest {
         Assert.assertEquals(homePage.getHomePageTitle(), "My Account", "=== Home Page Title is not Matched ===");
     }
 
+    /**
+     * Verifies login fails and shows a warning when the password is incorrect.
+     */
     @Description("Invalid Login Test - Wrong Password")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("Raghuveer Hanumantharaya")
@@ -96,6 +110,9 @@ public class LoginPageTest extends BaseTest {
         Assert.assertTrue(warningMsg.contains("Warning:"), AppError.INVALID_LOGIN_ERROR);
     }
 
+    /**
+     * Verifies login fails and shows a warning when credentials are empty.
+     */
     @Description("Invalid Login Test - Empty Credentials")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("Raghuveer Hanumantharaya")
