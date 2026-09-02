@@ -11,6 +11,11 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
+/**
+ * Builds browser-specific {@link Options} instances from framework properties.
+ * <p>
+ * Supported properties: {@code headless} and {@code incognito}.
+ */
 public class OptionsManager {
 
     private Properties properties;
@@ -20,10 +25,20 @@ public class OptionsManager {
 
     private static final Logger log = LoggerFactory.getLogger(OptionsManager.class);
 
+    /**
+     * Creates a new OptionsManager backed by the supplied properties.
+     *
+     * @param properties environment configuration
+     */
     public OptionsManager(Properties properties) {
         this.properties = properties;
     }
 
+    /**
+     * Builds ChromeOptions honoring {@code headless} and {@code incognito}.
+     *
+     * @return configured ChromeOptions
+     */
     public ChromeOptions getChromeOptions() {
         chromeOptions = new ChromeOptions();
         if (Boolean.parseBoolean(properties.getProperty("headless"))) {
@@ -42,6 +57,11 @@ public class OptionsManager {
 
     }
 
+    /**
+     * Builds FirefoxOptions honoring {@code headless} and {@code incognito}.
+     *
+     * @return configured FirefoxOptions
+     */
     public FirefoxOptions getFireFoxOptions() {
         firefoxOptions = new FirefoxOptions();
         if (Boolean.parseBoolean(properties.getProperty("headless"))) {
@@ -57,6 +77,11 @@ public class OptionsManager {
         return firefoxOptions;
     }
 
+    /**
+     * Builds EdgeOptions honoring {@code headless} and {@code incognito}.
+     *
+     * @return configured EdgeOptions
+     */
     public EdgeOptions getEdgeBrowserOptions() {
         edgeOptions = new EdgeOptions();
         if (Boolean.parseBoolean(properties.getProperty("headless"))) {

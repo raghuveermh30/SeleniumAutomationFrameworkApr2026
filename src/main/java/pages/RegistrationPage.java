@@ -5,12 +5,24 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.ElementUtil;
+import utils.StringUtil;
 
+/**
+ * Page object representing the OpenCart new-account registration page.
+ * <p>
+ * Exposes actions for submitting the registration form, validating
+ * success/error states, and logging out after registration.
+ */
 public class RegistrationPage {
 
     WebDriver driver;
     ElementUtil elementUtil;
 
+    /**
+     * Creates a new RegistrationPage bound to the given driver.
+     *
+     * @param driver the WebDriver instance controlling the browser
+     */
     public RegistrationPage(WebDriver driver) {
         this.driver = driver;
         elementUtil = new ElementUtil(driver);
@@ -29,12 +41,25 @@ public class RegistrationPage {
     private final By logoutLink = By.linkText("Logout");
     private final By validationError = By.cssSelector(".text-danger");
 
+    /**
+     * Fills in and submits the registration form. The supplied email is made
+     * unique via {@link StringUtil#getUniqueEmail(String)} before submission.
+     *
+     * @param fName first name
+     * @param lName last name
+     * @param emailId base email address (will be made unique)
+     * @param telPhn telephone number
+     * @param pwd account password
+     * @param confirmpassword password confirmation
+     * @return the success message text shown after registration
+     */
+    @Step("register user with email : {2}")
     public String doRegister(String fName, String lName, String emailId, String telPhn, String pwd, String confirmpassword) {
         elementUtil.waitForElementVisible(firstName, AppConstants.DEFAULT_TIME_OUT);
         elementUtil.doSendKeys(firstName, fName);
         elementUtil.doSendKeys(lastName, lName);
-        emailId = String.valueOf(System.currentTimeMillis()).substring(7) + emailId;
-        elementUtil.doSendKeys(email, emailId);
+        String uniqueEmail = StringUtil.getUniqueEmail(emailId);
+        elementUtil.doSendKeys(email, uniqueEmail);
         elementUtil.doSendKeys(telephone, telPhn);
         elementUtil.doSendKeys(password, pwd);
         elementUtil.doSendKeys(confirmPassword, confirmpassword);
@@ -43,12 +68,22 @@ public class RegistrationPage {
         return elementUtil.doElementGetText(successMsg);
     }
 
+    /**
+     * Checks whether the registration success message is displayed.
+     *
+     * @return true if the success message is displayed, false otherwise
+     */
     @Step("check if registration success message exists")
     public boolean isRegistrationSuccessMessageExist() {
         elementUtil.waitForElementVisible(successMsg, AppConstants.MEDIUM_TIME_OUT);
         return elementUtil.doElementIsDisplayed(successMsg);
     }
 
+    /**
+     * Clicks the Logout link and returns the resulting logout page.
+     *
+     * @return a new {@link LogoutPage}
+     */
     @Step("click on logout link")
     public LogoutPage clickOnLogoutLink() {
         elementUtil.waitForElementVisible(logoutLink, AppConstants.MEDIUM_TIME_OUT);
@@ -56,12 +91,21 @@ public class RegistrationPage {
         return new LogoutPage(driver);
     }
 
+    /**
+     * Submits the registration form without filling in any fields, to
+     * trigger validation errors.
+     */
     @Step("submit registration form without filling any fields")
     public void submitWithEmptyFields() {
         elementUtil.waitForElementVisible(continueBtn, AppConstants.DEFAULT_TIME_OUT);
         elementUtil.doClick(continueBtn);
     }
 
+    /**
+     * Checks whether any field validation errors are displayed on the page.
+     *
+     * @return true if at least one validation error is displayed, false otherwise
+     */
     @Step("check if validation errors are displayed")
     public boolean hasValidationErrors() {
         return elementUtil.getElements(validationError).size() > 0;
