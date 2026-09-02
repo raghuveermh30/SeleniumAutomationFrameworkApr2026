@@ -8,12 +8,21 @@ import utils.ElementUtil;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * Page object representing an individual OpenCart product detail page,
+ * exposing product header, images, metadata and pricing information.
+ */
 public class ProductInfoPage {
 
     WebDriver driver;
     private ElementUtil elementUtil;
     private Map<String, String> productMap;
 
+    /**
+     * Creates a new ProductInfoPage bound to the given driver.
+     *
+     * @param driver the WebDriver instance controlling the browser
+     */
     public ProductInfoPage(WebDriver driver) {
         this.driver = driver;
         elementUtil = new ElementUtil(driver);
@@ -29,12 +38,22 @@ public class ProductInfoPage {
     private final By myAccount = By.xpath("//span[normalize-space()='My Account']");
     private final By myAccountList = By.xpath("//ul[@class = 'dropdown-menu dropdown-menu-right']/li");
 
+    /**
+     * Returns the product name/header displayed on the page.
+     *
+     * @return the product header text
+     */
     public String getProductHeader() {
         String header = elementUtil.doElementGetText(productHeader);
         System.out.println("Product Header : " + header);
         return header;
     }
 
+    /**
+     * Logs out via the "My Account" dropdown and returns the resulting logout page.
+     *
+     * @return a new {@link LogoutPage}
+     */
     public LogoutPage logout() {
         elementUtil.doClick(myAccount);
         List<WebElement> myAccountDropDownList = driver.findElements(myAccountList);
@@ -47,6 +66,11 @@ public class ProductInfoPage {
         return new LogoutPage(driver);
     }
 
+    /**
+     * Returns the text of each product detail list item.
+     *
+     * @return a list of product detail texts
+     */
     public List<String> getProductDetails() {
         List<WebElement> productDetailsList = elementUtil.getElements(productDetails);
         List<String> productDetailsValueList = productDetailsList.stream().map(e -> e.getText()).collect(Collectors.toList());
@@ -54,12 +78,23 @@ public class ProductInfoPage {
         return productDetailsValueList;
     }
 
+    /**
+     * Returns the number of product thumbnail images displayed on the page.
+     *
+     * @return the count of product images
+     */
     public int getProductImagesCount() {
         int imagesCount = elementUtil.waitForElementsToBePresent(productImagesCount, AppConstants.MEDIUM_TIME_OUT).size();
         System.out.println(getProductHeader() + " : Images count : " + imagesCount);
         return imagesCount;
     }
 
+    /**
+     * Aggregates product header, image count, metadata and pricing details
+     * into a single map.
+     *
+     * @return a map of product attribute names to their values
+     */
     public Map<String, String> getProductInfoDetails() {
         // productMap = new LinkedHashMap<>();
         productMap = new TreeMap<>();

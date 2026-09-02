@@ -1,4 +1,7 @@
 allure-results/
+allure-report/
+.allure/
+logs/
 test-output/
 build/
 reports/

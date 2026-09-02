@@ -23,6 +23,12 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+/**
+ * Factory responsible for creating, managing and tearing down {@link WebDriver} instances.
+ * <p>
+ * Each thread receives its own driver via {@link ThreadLocal}, making parallel execution safe.
+ * Use {@link #getDriver()} everywhere instead of holding a local {@link WebDriver} reference.
+ */
 public class DriverFactory {
 
     WebDriver driver;
@@ -49,6 +55,13 @@ public class DriverFactory {
      * We need to implement when we test cases will be executed in the parallel mode execution
      */
 
+    /**
+     * Initializes a browser driver from the supplied properties.
+     *
+     * @param properties configuration containing browser, url, headless, incognito and highlight keys
+     * @return the initialized WebDriver
+     * @throws FrameworkException if the requested browser is not supported
+     */
     @Step("init the driver using properties : {0}")
     public WebDriver initDriver(Properties properties) {
 
@@ -99,6 +112,14 @@ public class DriverFactory {
     //mvn clean install -Denv="qa"
     //If any one is not passing the environment from the command line, then by default it will pick up the qa environment
 
+    /**
+     * Loads environment properties based on the {@code env} system property.
+     * <p>
+     * Defaults to {@code config.properties} (production) when no environment is supplied.
+     *
+     * @return the loaded environment properties
+     * @throws FrameworkException if an unsupported environment name is provided
+     */
     @Step("init the  properties")
     public Properties initProp() {
         properties = new Properties();
@@ -141,6 +162,11 @@ public class DriverFactory {
     /* This is used to get the driver with ThreadLocal
      *
      */
+    /**
+     * Returns the {@link WebDriver} bound to the current thread.
+     *
+     * @return the thread-local WebDriver instance
+     */
     public static WebDriver getDriver() {
         return driverThreadLocal.get();
     }
@@ -157,6 +183,11 @@ public class DriverFactory {
     /*
      * takescreenshot
      */
+    /**
+     * Saves a PNG screenshot to the {@code /screenshot} directory and returns the file path.
+     *
+     * @return the absolute path to the saved screenshot
+     */
     @Step("getScreenshot")
     public static String getScreenShot() {
         log.info(">>> Take ScreenShot");
@@ -171,6 +202,11 @@ public class DriverFactory {
         return path;
     }
 
+    /**
+     * Returns the current screenshot as a temporary {@link File}.
+     *
+     * @return the screenshot file
+     */
     @Step("getScreenshotFile")
     public static File getScreenshotFile() {
         log.info(">>>getScreenshotFile()");
@@ -178,6 +214,11 @@ public class DriverFactory {
         return srcFile;
     }
 
+    /**
+     * Returns the current screenshot as a byte array.
+     *
+     * @return the screenshot bytes
+     */
     @Step("getScreenshotByte")
     public static byte[] getScreenshotByte() {
         log.info(">>>getScreenshotByte()");
@@ -185,6 +226,11 @@ public class DriverFactory {
 
     }
 
+    /**
+     * Returns the current screenshot encoded as a Base64 string.
+     *
+     * @return the Base64 encoded screenshot
+     */
     @Step("getScreenshotBase64")
     public static String getScreenshotBase64() {
         log.info(">>>getScreenshotBase64()");

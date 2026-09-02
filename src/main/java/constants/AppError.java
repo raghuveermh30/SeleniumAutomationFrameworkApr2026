@@ -1,5 +1,9 @@
 package constants;
 
+/**
+ * Holds standard assertion/error message strings used across test classes
+ * to keep failure messages consistent.
+ */
 public abstract class AppError {
 
     public static final String LOGIN_PAGE_TITLE_ERROR = "Login page title is not correct";

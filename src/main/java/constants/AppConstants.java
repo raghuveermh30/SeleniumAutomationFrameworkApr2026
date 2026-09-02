@@ -1,5 +1,9 @@
 package constants;
 
+/**
+ * Holds framework-wide constant values such as page titles, URL fragments,
+ * timeout durations, configuration file paths, and test data sheet names.
+ */
 public abstract class AppConstants {
 
     public static final String LOGIN_PAGE_TITLE = "Account Login";
@@ -20,5 +24,8 @@ public abstract class AppConstants {
 
     public static final String PRODUCT_SHEET_NAME = "Product";
     public static final String REGISTRATION_SHEET_NAME = "Users";
+
+    public static final String TEST_DATA_WORKBOOK_PATH = "./src/test/resources/testdata/openCartTestdata.xlsx";
+    public static final String USERS_TEST_DATA_WORKBOOK_PATH = "./src/test/resources/testdata/users.xlsx";
 
 }
