@@ -56,15 +56,21 @@ Reports are produced at:
 ```
 src/main/java/
   factory/       DriverFactory, OptionsManager          — driver lifecycle
-  pages/         LoginPage, HomePage, ...               — POM classes
-  utils/         ElementUtil, ExcelUtil, JSExecutorUtil, BrowserUtil, StringUtil
+  pages/         LoginPage, HomePage, CommonPage, ...   — POM classes
+  utils/         ElementUtil, ExcelUtil, JavaScriptExecutorUtil, BrowserUtil, StringUtil, TestDataUtil
   listeners/     AnnotationTransformer, Retry, TestAllureListener
   constants/     AppConstants, AppError                 — magic strings/values/errors
+  errors/        FrameworkException                     — unchecked config/setup errors
 
 src/test/java/
   base/          BaseTest                               — setup/teardown, shared page fields
   test/          *Test classes
 ```
+
+- `pages.CommonPage` holds locators/actions shared across pages (logo, footer links).
+- `pages.LoginDemoPage` is a standalone scratch class with a `main()` method used for manual experimentation; it is **not** part of the automated test flow and has no Javadoc-worthy behavior beyond a `System.out.println`.
+- `utils.TestDataUtil` centralizes reusable `@DataProvider`s shared across test classes (e.g. `footerLinksData`), avoiding per-test duplication.
+- `errors.FrameworkException` is thrown by `DriverFactory` for invalid browser/environment names — a `RuntimeException` subclass, so callers aren't forced to catch it.
 
 ### Page Object contract
 
@@ -88,6 +94,8 @@ src/test/java/
 - **Excel data:** `ExcelUtil.getTestData(String sheetName)` reads from `users.xlsx`. For product data, use `ExcelUtil.getTestData(String filePath, String sheetName)` with `AppConstants.TEST_DATA_WORKBOOK_PATH`.
 - **Unique emails:** Use `StringUtil.getUniqueEmail(baseEmail)` instead of manual timestamp concatenation.
 - **Browser options:** `OptionsManager` applies `headless` and `incognito` flags from properties.
+- **Retry count:** `listeners.Retry` retries a failed test up to `maxTry = 3` times before it's marked permanently failed; `AnnotationTransformer` wires `Retry` onto every `@Test` automatically, so individual test methods don't need `retryAnalyzer` set explicitly.
+- **Default suite coverage:** `testng_regression.xml` (the default suite) only wires up `LoginPageTest`, `HomePageTest`, and `ProductInfoPageTest` across browsers. `RegistrationPageTest` and `LogoutPageTest` exist but are **not** included in the default regression run — run them explicitly with `-Dtest=RegistrationPageTest` / `-Dtest=LogoutPageTest`, or add them to a runner XML, if you need them exercised.
 
 ## Adding new code
 
@@ -125,6 +133,7 @@ src/test/java/
 - **Allure results directory:** Allure results are written to the project root `allure-results/`. The Allure Maven plugin is configured to read from `${project.basedir}/allure-results` and generate into `${project.basedir}/allure-report`.
 - **Generated files:** `allure-results/`, `allure-report/`, `.allure/`, `logs/`, `target/`, and `.idea/workspace.xml` should not be committed. They are listed in `.gitignore`.
 - **Cross-browser runs:** Firefox runs may fail if `geckodriver` is missing or corrupted locally. Verify driver availability before debugging test failures on Firefox/Edge.
+- **Safari driver is NOT ThreadLocal-safe:** In `DriverFactory.initDriver()`, the `chrome`/`firefox`/`edge` branches call `driverThreadLocal.set(...)`, but the `safari` branch assigns to the plain instance field `driver` instead. `DriverFactory.getDriver()` reads only `driverThreadLocal`, so Safari runs will NPE on `getDriver()`. Fix this (set `driverThreadLocal` in the safari branch too) before relying on Safari, especially in parallel suites.
 
 ## Verification checklist
 
